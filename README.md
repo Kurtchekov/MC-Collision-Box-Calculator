@@ -1,6 +1,6 @@
-#MC Collision Box Calculator
+# MC Collision Box Calculator
 
-Steps:
+### Steps:
 1. Download and install the latest version of Unity.
 2. Create a new project and paste the contents of this repository's Assets folder into your project's.
 3. Under Window menu, select "AABB".
