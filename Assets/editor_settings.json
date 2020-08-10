@@ -1,0 +1,9 @@
+{
+    "precision": 8,
+    "invertX": true,
+    "invertY": false,
+    "invertZ": true,
+    "acceptableAABB": 8,
+    "axisOrder": 1,
+    "outputFormat": "{8}, {11}, {0}, {3}, {1}, {4}"
+}

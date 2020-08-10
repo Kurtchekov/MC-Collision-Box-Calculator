@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 class AABBGenerator {
 
     public volatile int collisions, totalCollisions;
-    public List<List<Bounds>> allBounds;
-    public List<List<Box>> normalizedBoxes;
-    public List<Triangle> triangles;
-
+    public List<BlockPosition> allBounds;
     public volatile int progress;
 
+    internal List<(Triangle triangle, Vector3 normal)> geometry;
     internal float x0, y0, z0;
     internal int width, height, length;
     internal bool invertX, invertY, invertZ;
@@ -18,6 +17,8 @@ class AABBGenerator {
     internal Order axisOrder;
 
     public void Reset(Mesh mesh, bool invertX, bool invertY, bool invertZ, Order axisOrder, int acceptableAABB) {
+        if(mesh == null)
+            return;
         this.invertX = invertX;
         this.invertY = invertY;
         this.invertZ = invertZ;
@@ -32,46 +33,132 @@ class AABBGenerator {
         y0 = invertY ? Mathf.Ceil(mesh.bounds.max.y) - 0.5f : Mathf.Floor(mesh.bounds.min.y) + 0.5f;
         z0 = invertZ ? Mathf.Ceil(mesh.bounds.max.z) - 0.5f : Mathf.Floor(mesh.bounds.min.z) + 0.5f;
 
-        triangles = new List<Triangle>();
+        geometry = new List<(Triangle triangle, Vector3 normal)>();
         int a = 0;
         while(a <= mesh.triangles.Length - 3) {
-            triangles.Add(new Triangle(
+            geometry.Add((new Triangle(
                 mesh.vertices[mesh.triangles[a]],
                 mesh.vertices[mesh.triangles[a + 1]],
-                mesh.vertices[mesh.triangles[a + 2]]));
+                mesh.vertices[mesh.triangles[a + 2]]),
+            CalcNormalOfFace(
+                mesh.vertices[mesh.triangles[a]],
+                mesh.vertices[mesh.triangles[a + 1]],
+                mesh.vertices[mesh.triangles[a + 2]],
+                mesh.normals[mesh.triangles[a]],
+                mesh.normals[mesh.triangles[a + 1]],
+                mesh.normals[mesh.triangles[a + 2]])));
             a += 3;
         }
         
         totalCollisions = collisions = 0;
     }
 
-    public List<Bounds> CalculateAllBlocks() {
-        List<Bounds> boundsList = new List<Bounds>();
+    Vector3 CalcNormalOfFace(Vector3 aPos, Vector3 bPos, Vector3 cPos, Vector3 aNormal, Vector3 bNormal, Vector3 cNormal) {
+        Vector3 p0 = bPos - aPos;
+        Vector3 p1 = cPos - aPos;
+        Vector3 faceNormal = Vector3.Cross(p0, p1);
+
+        Vector3 vertexNormal = (aNormal + bNormal + cNormal) / 3;
+        float dot = Vector3.Dot(faceNormal, vertexNormal);
+
+        return Vector3.Normalize((dot < 0.0f) ? -faceNormal : faceNormal);
+    }
+
+    public List<Block> CalculateAllBlocks() {
+        List<Block> boundsList = new List<Block>();
         for(int currentPos = 0; currentPos < width * height * length; currentPos++) {
-            Vector3 pos = new Vector3(
-                x0 + (RelativeX(currentPos, axisOrder, width, height, length) * (invertX ? -1 : 1)),
-                y0 + (RelativeY(currentPos, axisOrder, width, height, length) * (invertY ? -1 : 1)),
-                z0 + (RelativeZ(currentPos, axisOrder, width, height, length) * (invertZ ? -1 : 1)));
+            Vector3 pos = BlockPosToWorldVector3(currentPos);
             Bounds bounds = new Bounds(pos, new Vector3(.9999f, .9999f, .9999f));
-            if(IsInside(pos, triangles) || Intersects(triangles, bounds))
-                boundsList.Add(new Bounds(pos, new Vector3(1, 1, 1)));
+            if (IsInside(pos, geometry) || Intersects(geometry, bounds)) boundsList.Add(new Block(currentPos));
         }
         return boundsList;
     }
 
+    public Vector3 BlockPosToWorldVector3(int pos) {
+        return new Vector3(
+                x0 + (RelativeX(pos, axisOrder, width, height, length) * (invertX ? -1 : 1)),
+                y0 + (RelativeY(pos, axisOrder, width, height, length) * (invertY ? -1 : 1)),
+                z0 + (RelativeZ(pos, axisOrder, width, height, length) * (invertZ ? -1 : 1)));
+    }
+
+    static public int FirstDimension(int x, int y, int z, Order order) {
+        switch(order) {
+            case Order.XYZ:
+                return x;
+            case Order.XZY:
+                return x;
+            case Order.YXZ:
+                return y;
+            case Order.ZXY:
+                return z;
+            case Order.YZX:
+                return y;
+            case Order.ZYX:
+                return z;
+        }
+        return 0;
+    }
+
+    static public int SecondDimension(int x, int y, int z, Order order) {
+        switch(order) {
+            case Order.XYZ:
+                return y;
+            case Order.XZY:
+                return z;
+            case Order.YXZ:
+                return x;
+            case Order.ZXY:
+                return x;
+            case Order.YZX:
+                return z;
+            case Order.ZYX:
+                return y;
+        }
+        return 0;
+    }
+
+    static public int ThirdDimension(int x, int y, int z, Order order) {
+        switch(order) {
+            case Order.XYZ:
+                return z;
+            case Order.XZY:
+                return y;
+            case Order.YXZ:
+                return z;
+            case Order.ZXY:
+                return y;
+            case Order.YZX:
+                return x;
+            case Order.ZYX:
+                return x;
+        }
+        return 0;
+    }
+
+    public int BlockPosToLocalX(int pos) {
+        return RelativeX(pos, axisOrder, width, height, length);
+    }
+
+    public int BlockPosToLocalY(int pos) {
+        return RelativeY(pos, axisOrder, width, height, length);
+    }
+
+    public int BlockPosToLocalZ(int pos) {
+        return RelativeZ(pos, axisOrder, width, height, length);
+    }
+
     public List<Bounds> CalculateSingle(float x, float y, float z, int precision) {
         if (precision == 1) {
-            return IsInside(new Vector3(x, y, z), triangles) || 
-                Intersects(triangles, new Bounds(new Vector3(x, y, z), new Vector3(.9999f, .9999f, .9999f))) ? 
+            return IsInside(new Vector3(x, y, z), geometry) || 
+                Intersects(geometry, new Bounds(new Vector3(x, y, z), new Vector3(.9999f, .9999f, .9999f))) ? 
                 new List<Bounds> { new Bounds(new Vector3(x, y, z), new Vector3(1, 1, 1)) } : new List<Bounds>();
         }
-        return BruteForceGenerateAABB(x, y, z, precision, triangles);
+        return BruteForceGenerateAABB(x, y, z, precision, geometry);
     }
 
     public void CalculateAll() {
         progress = 0;
-        allBounds = new List<List<Bounds>>();
-        normalizedBoxes = new List<List<Box>>();
+        allBounds = new List<BlockPosition>();
         totalCollisions = 0;
         for(int currentPos = 0; currentPos < width * height * length; currentPos++) {
             float x1 = x0 + (RelativeX(currentPos, axisOrder, width, height, length) * (invertX ? -1 : 1));
@@ -80,26 +167,27 @@ class AABBGenerator {
 
             List<Bounds> AABBs = CalculateBlockAABB(x1, y1, z1);
             progress++;
-            allBounds.Add(AABBs);
             totalCollisions += AABBs.Count;
 
-            List<Box> boxes = new List<Box>();
             foreach(Bounds aabb in AABBs) {
-                boxes.Add(new Box(
+                BlockPosition block = new BlockPosition();
+                block.bounds = aabb;
+                block.pos = currentPos;
+                block.normalizedBox = new Box(
                     (byte) ConvertRange(-0.5f, 0.5f, 0, 16, aabb.min.x - x1),
                     (byte) ConvertRange(-0.5f, 0.5f, 0, 16, aabb.min.y - y1),
                     (byte) ConvertRange(-0.5f, 0.5f, 0, 16, aabb.min.z - z1),
                     (byte) ConvertRange(-0.5f, 0.5f, 0, 16, aabb.max.x - x1),
                     (byte) ConvertRange(-0.5f, 0.5f, 0, 16, aabb.max.y - y1),
-                    (byte) ConvertRange(-0.5f, 0.5f, 0, 16, aabb.max.z - z1)));
+                    (byte) ConvertRange(-0.5f, 0.5f, 0, 16, aabb.max.z - z1));
+                allBounds.Add(block);
             }
-            normalizedBoxes.Add(boxes);
         }
     }
 
     List<Bounds> CalculateBlockAABB(float x, float y, float z) {
         Bounds bounds = new Bounds(new Vector3(x, y, z), new Vector3(.9999f, .9999f, .9999f));
-        if(!IsInside(new Vector3(x, y, z), triangles) && !Intersects(triangles, bounds))
+        if(!IsInside(new Vector3(x, y, z), geometry) && !Intersects(geometry, bounds))
             return new List<Bounds>();
         List<Bounds> uniqueBounds = null;
         List<Bounds> previous = new List<Bounds>() { new Bounds(new Vector3(x, y, z), new Vector3(1, 1, 1)) };
@@ -113,7 +201,7 @@ class AABBGenerator {
     }
 
     List<Bounds> CalculateSubBlockAABB(float x, float y, float z, int precision) {
-        List<Bounds> uniqueBounds = BruteForceGenerateAABB(x, y, z, precision, triangles);
+        List<Bounds> uniqueBounds = BruteForceGenerateAABB(x, y, z, precision, geometry);
 
         int collisionsAfter;
         do {
@@ -141,7 +229,7 @@ class AABBGenerator {
         return uniqueBounds;
     }
 
-    public static List<Bounds> BruteForceGenerateAABB(float x, float y, float z, int precision, List<Triangle> triangles) {
+    public static List<Bounds> BruteForceGenerateAABB(float x, float y, float z, int precision, List<(Triangle triangle, Vector3 normal)> geometry) {
         List<Bounds> uniqueBounds = new List<Bounds>();
         float fullSize = 1f / precision;
         float halfSize = .5f / precision;
@@ -151,7 +239,7 @@ class AABBGenerator {
                 for(int k = -precision / 2; k < precision / 2; k++) {
                     Vector3 tinyPos = new Vector3(x + i * fullSize + halfSize, y + j * fullSize + halfSize, z + k * fullSize + halfSize);
                     Bounds bounds = new Bounds(tinyPos, new Vector3(slightFullSize, slightFullSize, slightFullSize));
-                    if(IsInside(tinyPos, triangles) || Intersects(triangles, bounds))
+                    if(IsInside(tinyPos, geometry) || Intersects(geometry, bounds))
                         uniqueBounds.Add(new Bounds(tinyPos, new Vector3(fullSize, fullSize, fullSize)));
                     
                 }
@@ -164,19 +252,81 @@ class AABBGenerator {
         return bounds.size.x * bounds.size.y * bounds.size.z;
     }
 
-    public static bool IsInside(Vector3 pos, List<Triangle> triangles) {
-        List<Vector3> points = new List<Vector3>();
+    public static bool IsInside(Vector3 pos, List<(Triangle triangle, Vector3 normal)> geometry) {
+        //List<(Vector3 point, Vector3 normal, Triangle triangle)> intersections = new List<(Vector3 point, Vector3 normal, Triangle triangle)>();
         Vector3 point;
-        int up = 0;
-        foreach(Triangle tri in triangles) {
-            if(Intersect3D_RayTriangle(pos, Vector3.up, tri, out point) == 1) {
-                if(!points.Contains(point)) {
-                    points.Add(point);
-                    up++;
-                }
-            }
+
+        bool collision = false;
+        foreach((Triangle triangle, Vector3 normal) face in geometry) {
+            if(Intersect3D_RayTriangle(pos, Vector3.down, face.triangle, out point) != 1)
+                continue;
+            collision = true;
+            break;
+                /*if(Vector3.Dot(face.normal, Vector3.down) == 0)
+                    continue;
+                if(!intersections.Exists(x => x.point == point)) {
+                    intersections.Add((point, face.normal, face.triangle));
+                    down++;
+                }*/
         }
-        return up % 2 == 1;
+        if(collision == false)
+            return false;
+        collision = false;
+        foreach((Triangle triangle, Vector3 normal) face in geometry) {
+            if(Intersect3D_RayTriangle(pos, Vector3.up, face.triangle, out point) != 1)
+                continue;
+            collision = true;
+            break;
+        }
+        if(collision == false)
+            return false;
+        collision = false;
+        foreach((Triangle triangle, Vector3 normal) face in geometry) {
+            if(Intersect3D_RayTriangle(pos, Vector3.left, face.triangle, out point) != 1)
+                continue;
+            collision = true;
+            break;
+        }
+        if(collision == false)
+            return false;
+        collision = false;
+        foreach((Triangle triangle, Vector3 normal) face in geometry) {
+            if(Intersect3D_RayTriangle(pos, Vector3.right, face.triangle, out point) != 1)
+                continue;
+            collision = true;
+            break;
+        }
+        if(collision == false)
+            return false;
+        collision = false;
+        foreach((Triangle triangle, Vector3 normal) face in geometry) {
+            if(Intersect3D_RayTriangle(pos, Vector3.back, face.triangle, out point) != 1)
+                continue;
+            collision = true;
+            break;
+        }
+        if(collision == false)
+            return false;
+        collision = false;
+        foreach((Triangle triangle, Vector3 normal) face in geometry) {
+            if(Intersect3D_RayTriangle(pos, Vector3.forward, face.triangle, out point) != 1)
+                continue;
+            collision = true;
+            break;
+        }
+        return collision;
+        /*if(intersections.Count == 0)
+            return false;
+        (Vector3 point, Vector3 normal) closestPoint = intersections.Aggregate((closest, next) => next.point.y > closest.point.y ? next : closest);
+        return Vector3.Dot(closestPoint.normal, closestPoint.point) > 0;
+        int inside = 0;
+        foreach((Vector3 point, Vector3 normal, Triangle triangle) intersection in intersections) {
+            inside += Vector3.Dot(intersection.normal, Vector3.down) > 0 ? 1 : -1;
+        }
+        //Debug.Log(inside);
+        return inside > 0;
+        Debug.Log(string.Format("problem: {0}, {1}", up, down));
+        return up % 2 == 1 || down % 2 == 1;*/
     }
 
     public static int RelativeX(int position, Order axisOrder, Vector3 size) {
@@ -194,9 +344,9 @@ class AABBGenerator {
             case Order.ZXY:
                 return (position - (position % length)) / width % width;
             case Order.YZX:
-                return position / (height * length);
+                return position / (height * length) % (height * length);
             case Order.ZYX:
-                return position / (height * length);
+                return position / (height * length) % (height * length);
         }
         return 0;
     }
@@ -210,11 +360,11 @@ class AABBGenerator {
             case Order.XYZ:
                 return (position - (position % width)) / height % height;
             case Order.XZY:
-                return position / (width * length);
+                return position / (width * length) % (width * length);
             case Order.YXZ:
                 return position % height;
             case Order.ZXY:
-                return position / (length * width);
+                return position / (width * length) % (width * length);
             case Order.YZX:
                 return position % height;
             case Order.ZYX:
@@ -230,11 +380,11 @@ class AABBGenerator {
     public static int RelativeZ(int position, Order axisOrder, int width, int height, int length) {
         switch(axisOrder) {
             case Order.XYZ:
-                return position / (width * height);
+                return position / (width * height) % (width * height);
             case Order.XZY:
                 return (position - (position % width)) / length % length;
             case Order.YXZ:
-                return position / (height * width);
+                return position / (width * height) % (width * height);
             case Order.ZXY:
                 return position % length;
             case Order.YZX:
@@ -245,9 +395,9 @@ class AABBGenerator {
         return 0;
     }
 
-    public static bool Intersects(List<Triangle> triangles, Bounds aabb) {
-        foreach(Triangle tri in triangles) {
-            if(Intersects(tri, aabb))
+    public static bool Intersects(List<(Triangle triangle, Vector3 normal)> geometry, Bounds aabb) {
+        foreach((Triangle triangle, Vector3 normal) face in geometry) {
+            if(Intersects(face.triangle, aabb))
                 return true;
         }
         return false;
@@ -409,6 +559,117 @@ class AABBGenerator {
         double t = f * Vector3.Dot(edge2, q);
         return (t > EPSILON);
     }
+
+    /*public struct VectorKurt {
+        public decimal x;
+        public decimal y;
+        public decimal z;
+
+        public VectorKurt(decimal x, decimal y, decimal z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
+        public VectorKurt(Vector3 source) {
+            this.x = (decimal)source.x;
+            this.y = (decimal)source.y;
+            this.z = (decimal)source.z;
+        }
+
+        public bool IsZero() {
+            return x == 0 && y == 0 && z == 0;
+        }
+
+        public static VectorKurt Sub(Vector3 a, Vector3 b) {
+            return new VectorKurt(a) - new VectorKurt(b);
+        }
+
+        public static VectorKurt Cross(Vector3 a, Vector3 b) {
+            return Cross(new VectorKurt(a), new VectorKurt(b));
+        }
+
+        public static VectorKurt Cross(VectorKurt a, VectorKurt b) {
+            return new VectorKurt(
+                (decimal)(a.y * b.z - b.y * a.z),
+                (decimal)((a.x * b.z - b.x * a.z) * -1),
+                (decimal)(a.x * b.y - b.x * a.y));
+        }
+
+        public static decimal Dot(VectorKurt a, VectorKurt b) {
+            return a.x * b.x + a.y * b.y + a.z * b.z;
+        }
+
+        public static VectorKurt operator *(decimal value, VectorKurt a) {
+            return new VectorKurt(value * a.x, value * a.y, value * a.z);
+        }
+
+        public static VectorKurt operator +(Vector3 a, VectorKurt b) {
+            return new VectorKurt((decimal)a.x + b.x, (decimal)a.y + b.y, (decimal)a.z + b.z);
+        }
+
+        public static VectorKurt operator -(VectorKurt a, VectorKurt b) {
+            return new VectorKurt(a.x - b.x, a.y - b.y, a.z - b.z);
+        }
+    }
+
+    public static int Intersect3D_RayTriangle(Vector3 origin, Vector3 direction, Triangle T, bool debug, out Vector3 point) {
+        point = Vector3.zero;
+        VectorKurt intersectionPoint = new VectorKurt(0,0,0);
+        decimal EPSILON = 0.0000001M;
+        VectorKurt u, v, n;              // triangle vectors
+        VectorKurt dir, w0, w;           // ray vectors
+        decimal r, a, b;              // params to calc ray-plane intersect
+
+        // get triangle edge vectors and plane normal
+        u = VectorKurt.Sub(T.b, T.a);
+        v = VectorKurt.Sub(T.c, T.a);
+        n = VectorKurt.Cross(u, v);              // cross product
+        if(n.IsZero())             // triangle is degenerate
+            return -1;                  // do not deal with this case
+
+        dir = new VectorKurt(direction);              // ray direction vector
+        w0 = VectorKurt.Sub(origin, T.a);
+        a = -VectorKurt.Dot(n, w0);
+        b = VectorKurt.Dot(n, dir);
+        if(Math.Abs(b) < EPSILON) {     // ray is  parallel to triangle plane
+            if(a == 0)                 // ray lies in triangle plane
+                return 2;
+            else
+                return 0;              // ray disjoint from plane
+        }
+
+        // get intersect point of ray with triangle plane
+        r = a / b;
+        if(r < 0)                    // ray goes away from triangle
+            return 0;                   // => no intersect
+                                        // for a segment, also test if (r > 1.0) => no intersect
+
+        intersectionPoint = origin + r * dir;            // intersect point of ray and plane
+        point = new Vector3((float)intersectionPoint.x, (float)intersectionPoint.y, (float)intersectionPoint.z);
+
+        // is I inside T?
+        decimal uu, uv, vv, wu, wv, D;
+        uu = VectorKurt.Dot(u, u);
+        uv = VectorKurt.Dot(u, v);
+        vv = VectorKurt.Dot(v, v);
+        w = intersectionPoint - new VectorKurt(T.a);
+        wu = VectorKurt.Dot(w, u);
+        wv = VectorKurt.Dot(w, v);
+        D = uv * uv - uu * vv;
+
+        // get and test parametric coords
+        decimal s, t;
+        s = (uv * wv - vv * wu) / D;
+
+        if(s < 0 || s > 1)         // I is outside T
+            return 0;
+        t = (uv * wu - uu * wv) / D;
+        if(t < 0 || (s + t) > 1)  // I is outside T
+            return 0;
+
+        return 1;                       // I is in T
+    }*/
 
     public static int Intersect3D_RayTriangle(Vector3 origin, Vector3 direction, Triangle T, out Vector3 I) {
         I = Vector3.zero;

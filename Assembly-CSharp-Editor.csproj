@@ -65,7 +65,15 @@
   <ItemGroup>
     <Compile Include="Assets\Editor\AABB.cs" />
     <Compile Include="Assets\Editor\AABBGenerator.cs" />
+    <Compile Include="Assets\Editor\Block.cs" />
+    <Compile Include="Assets\Editor\BlockPosition.cs" />
     <Compile Include="Assets\Editor\Box.cs" />
+    <Compile Include="Assets\Editor\ExportUtils\JsonMaster.cs" />
+    <Compile Include="Assets\Editor\ExportUtils\JsonPaletteEntry.cs" />
+    <Compile Include="Assets\Editor\ExportUtils\JsonPoI.cs" />
+    <Compile Include="Assets\Editor\ExportUtils\JsonStructure.cs" />
+    <Compile Include="Assets\Editor\PaletteEntry.cs" />
+    <Compile Include="Assets\Editor\PoI.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Programs/Unity/2019.4.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -639,6 +647,9 @@
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Projetos/MC Collision Box Calculator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>D:/Projetos/MC Collision Box Calculator/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/Projetos/MC Collision Box Calculator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -668,9 +679,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Projetos/MC Collision Box Calculator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>D:/Projetos/MC Collision Box Calculator/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

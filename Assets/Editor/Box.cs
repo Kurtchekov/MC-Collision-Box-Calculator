@@ -1,5 +1,10 @@
-﻿struct Box {
-    public readonly byte x0, y0, z0, x1, y1, z1;
+﻿using System;
+
+[Serializable]
+public class Box {
+    public byte x0, y0, z0, x1, y1, z1;
+
+    public Box() { }
 
     public Box(byte x0, byte y0, byte z0, byte x1, byte y1, byte z1) {
         this.x0 = x0;
@@ -11,11 +16,11 @@
     }
 
     public override string ToString() {
-        return ("{" + string.Join(",", x0, y0, z0, x1, y1, z1) + "}");
+        return ("[" + string.Join(",", x0, y0, z0, x1, y1, z1) + "]");
     }
 
     public string ToString(string format) {
-        return ("{" + string.Format(format, x0, y0, z0, x1, y1, z1, 16-x0, 16-y0, 16-z0, 16-x1, 16-y1, 16-z1) + "}");
+        return ("[" + string.Format(format, x0, y0, z0, x1, y1, z1, 16-x0, 16-y0, 16-z0, 16-x1, 16-y1, 16-z1) + "]");
     }
 
     public static bool operator ==(Box box0, Box box1) {
