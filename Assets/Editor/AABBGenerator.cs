@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
 class AABBGenerator {
@@ -69,6 +68,7 @@ class AABBGenerator {
         for(int currentPos = 0; currentPos < width * height * length; currentPos++) {
             Vector3 pos = BlockPosToWorldVector3(currentPos);
             Bounds bounds = new Bounds(pos, new Vector3(.9999f, .9999f, .9999f));
+            //Debug.Log(pos);
             if (IsInside(pos, geometry) || Intersects(geometry, bounds)) boundsList.Add(new Block(currentPos));
         }
         return boundsList;
@@ -340,13 +340,13 @@ class AABBGenerator {
             case Order.XZY:
                 return position % width;
             case Order.YXZ:
-                return (position - (position % height)) / width % width;
+                return (position - (position % height)) / height % width;
             case Order.ZXY:
-                return (position - (position % length)) / width % width;
+                return (position - (position % length)) / length % width;
             case Order.YZX:
-                return position / (height * length) % (height * length);
+                return position / (height * length);
             case Order.ZYX:
-                return position / (height * length) % (height * length);
+                return position / (height * length);
         }
         return 0;
     }
@@ -358,17 +358,17 @@ class AABBGenerator {
     public static int RelativeY(int position, Order axisOrder, int width, int height, int length) {
         switch(axisOrder) {
             case Order.XYZ:
-                return (position - (position % width)) / height % height;
+                return (position - (position % width)) / width % height;
             case Order.XZY:
-                return position / (width * length) % (width * length);
+                return position / (width * length);
             case Order.YXZ:
                 return position % height;
             case Order.ZXY:
-                return position / (width * length) % (width * length);
+                return position / (width * length);
             case Order.YZX:
                 return position % height;
             case Order.ZYX:
-                return (position - (position % length)) / height % height;
+                return (position - (position % length)) / length % height;
         }
         return 0;
     }
@@ -380,15 +380,15 @@ class AABBGenerator {
     public static int RelativeZ(int position, Order axisOrder, int width, int height, int length) {
         switch(axisOrder) {
             case Order.XYZ:
-                return position / (width * height) % (width * height);
+                return position / (width * height);
             case Order.XZY:
-                return (position - (position % width)) / length % length;
+                return (position - (position % width)) / width % length;
             case Order.YXZ:
-                return position / (width * height) % (width * height);
+                return position / (width * height);
             case Order.ZXY:
                 return position % length;
             case Order.YZX:
-                return (position - (position % height)) / length % length;
+                return (position - (position % height)) / height % length;
             case Order.ZYX:
                 return position % length;
         }

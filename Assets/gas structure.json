@@ -1,0 +1,4255 @@
+{
+    "structureUID": "IT:gasTurbine",
+    "masterPos": 25,
+    "palette": [
+        {
+            "name": "blockSteel",
+            "identifier": "B",
+            "meta": 0,
+            "isValid": true,
+            "mod": "",
+            "isOreDict": true
+        },
+        {
+            "name": "metal_decoration1",
+            "identifier": "S",
+            "meta": 1,
+            "isValid": true,
+            "mod": "immersiveengineering",
+            "isOreDict": false
+        },
+        {
+            "name": "metal_device1",
+            "identifier": "P",
+            "meta": 6,
+            "isValid": true,
+            "mod": "immersiveengineering",
+            "isOreDict": false
+        },
+        {
+            "name": "metal_decoration0",
+            "identifier": "H",
+            "meta": 5,
+            "isValid": true,
+            "mod": "immersiveengineering",
+            "isOreDict": false
+        },
+        {
+            "name": "metal_decoration0",
+            "identifier": "R",
+            "meta": 3,
+            "isValid": true,
+            "mod": "immersiveengineering",
+            "isOreDict": false
+        },
+        {
+            "name": "metal_decoration0",
+            "identifier": "C",
+            "meta": 2,
+            "isValid": true,
+            "mod": "immersiveengineering",
+            "isOreDict": false
+        },
+        {
+            "name": "sheetmetal",
+            "identifier": "M",
+            "meta": 8,
+            "isValid": true,
+            "mod": "immersiveengineering",
+            "isOreDict": false
+        },
+        {
+            "name": "sheetmetal_slab",
+            "identifier": "N",
+            "meta": 8,
+            "isValid": true,
+            "mod": "immersiveengineering",
+            "isOreDict": false
+        }
+    ],
+    "pointsOfInterest": [
+        {
+            "pos": 26,
+            "id": "redstone",
+            "facing": 5,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 24,
+            "id": "input",
+            "facing": 3,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 6,
+            "id": "power0",
+            "facing": 4,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 8,
+            "id": "power1",
+            "facing": 5,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 19,
+            "id": "output",
+            "facing": 2,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 46,
+            "id": "mechanical_output",
+            "facing": 2,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 31,
+            "id": "ignition_sound",
+            "facing": 2,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 37,
+            "id": "running_sound",
+            "facing": 2,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 49,
+            "id": "particle",
+            "facing": 2,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 25,
+            "id": "arc_sound",
+            "facing": 2,
+            "isValid": true,
+            "hide": false
+        },
+        {
+            "pos": 28,
+            "id": "starter_sound",
+            "facing": 2,
+            "isValid": true,
+            "hide": false
+        }
+    ],
+    "validFullBlocks": [
+        {
+            "displayValue": "[S] immersiveengineering:metal_decoration1",
+            "paletteValue": "S",
+            "pos": 0
+        },
+        {
+            "displayValue": "[S] immersiveengineering:metal_decoration1",
+            "paletteValue": "S",
+            "pos": 1
+        },
+        {
+            "displayValue": "[S] immersiveengineering:metal_decoration1",
+            "paletteValue": "S",
+            "pos": 2
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 3
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 4
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 5
+        },
+        {
+            "displayValue": "[C] immersiveengineering:metal_decoration0",
+            "paletteValue": "C",
+            "pos": 6
+        },
+        {
+            "displayValue": "[C] immersiveengineering:metal_decoration0",
+            "paletteValue": "C",
+            "pos": 7
+        },
+        {
+            "displayValue": "[C] immersiveengineering:metal_decoration0",
+            "paletteValue": "C",
+            "pos": 8
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 9
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 10
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 11
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 12
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 13
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 14
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 15
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 16
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 17
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 18
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 19
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 20
+        },
+        {
+            "displayValue": "[P] immersiveengineering:metal_device1",
+            "paletteValue": "P",
+            "pos": 24
+        },
+        {
+            "displayValue": "[B] blockSteel",
+            "paletteValue": "B",
+            "pos": 25
+        },
+        {
+            "displayValue": "[R] immersiveengineering:metal_decoration0",
+            "paletteValue": "R",
+            "pos": 26
+        },
+        {
+            "displayValue": "[P] immersiveengineering:metal_device1",
+            "paletteValue": "P",
+            "pos": 27
+        },
+        {
+            "displayValue": "[B] blockSteel",
+            "paletteValue": "B",
+            "pos": 28
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 29
+        },
+        {
+            "displayValue": "[C] immersiveengineering:metal_decoration0",
+            "paletteValue": "C",
+            "pos": 30
+        },
+        {
+            "displayValue": "[B] blockSteel",
+            "paletteValue": "B",
+            "pos": 31
+        },
+        {
+            "displayValue": "[C] immersiveengineering:metal_decoration0",
+            "paletteValue": "C",
+            "pos": 32
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 33
+        },
+        {
+            "displayValue": "[B] blockSteel",
+            "paletteValue": "B",
+            "pos": 34
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 35
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 36
+        },
+        {
+            "displayValue": "[B] blockSteel",
+            "paletteValue": "B",
+            "pos": 37
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 38
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 39
+        },
+        {
+            "displayValue": "[B] blockSteel",
+            "paletteValue": "B",
+            "pos": 40
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 41
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 42
+        },
+        {
+            "displayValue": "[B] blockSteel",
+            "paletteValue": "B",
+            "pos": 43
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 44
+        },
+        {
+            "displayValue": "[B] blockSteel",
+            "paletteValue": "B",
+            "pos": 46
+        },
+        {
+            "displayValue": "[N] immersiveengineering:sheetmetal_slab",
+            "paletteValue": "N",
+            "pos": 48
+        },
+        {
+            "displayValue": "[N] immersiveengineering:sheetmetal_slab",
+            "paletteValue": "N",
+            "pos": 49
+        },
+        {
+            "displayValue": "[N] immersiveengineering:sheetmetal_slab",
+            "paletteValue": "N",
+            "pos": 50
+        },
+        {
+            "displayValue": "[C] immersiveengineering:metal_decoration0",
+            "paletteValue": "C",
+            "pos": 54
+        },
+        {
+            "displayValue": "[C] immersiveengineering:metal_decoration0",
+            "paletteValue": "C",
+            "pos": 55
+        },
+        {
+            "displayValue": "[C] immersiveengineering:metal_decoration0",
+            "paletteValue": "C",
+            "pos": 56
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 57
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 58
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 59
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 60
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 61
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 62
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 63
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 64
+        },
+        {
+            "displayValue": "[M] immersiveengineering:sheetmetal",
+            "paletteValue": "M",
+            "pos": 65
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 66
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 67
+        },
+        {
+            "displayValue": "[H] immersiveengineering:metal_decoration0",
+            "paletteValue": "H",
+            "pos": 68
+        }
+    ],
+    "allSubAABBs": [
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.375,
+                    "y": -0.5,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 0,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": -0.5,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 1,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.875,
+                    "y": -0.25,
+                    "z": 0.25
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.25,
+                    "z": 0.125
+                }
+            },
+            "pos": 2,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 8,
+                "z0": 2,
+                "x1": 4,
+                "y1": 16,
+                "z1": 6
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.875,
+                    "y": -0.25,
+                    "z": 0.75
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.25,
+                    "z": 0.125
+                }
+            },
+            "pos": 2,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 8,
+                "z0": 10,
+                "x1": 4,
+                "y1": 16,
+                "z1": 14
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.875,
+                    "y": -0.75,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.25,
+                    "z": 0.5
+                }
+            },
+            "pos": 2,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 4,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.375,
+                    "y": -0.5,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 2,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.25,
+                    "y": -0.5,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 3,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 8,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": -0.5,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 4,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.25,
+                    "y": -0.5,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 5,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.5,
+                    "y": -0.5,
+                    "z": -1.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 6,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": -0.5,
+                    "z": -1.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 7,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.5,
+                    "y": -0.5,
+                    "z": -1.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 8,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.875,
+                    "y": -0.5,
+                    "z": -2.25
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.5,
+                    "z": 0.25
+                }
+            },
+            "pos": 9,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 0,
+                "z0": 8,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.375,
+                    "y": -0.5,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 9,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": -0.5,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 10,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.875,
+                    "y": -0.5,
+                    "z": -2.25
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.5,
+                    "z": 0.25
+                }
+            },
+            "pos": 11,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 8,
+                "x1": 4,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.375,
+                    "y": -0.5,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 11,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.375,
+                    "y": -0.5,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 12,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": -0.5,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 13,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.375,
+                    "y": -0.5,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 14,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.875,
+                    "y": -0.5,
+                    "z": -4.75
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.5,
+                    "z": 0.25
+                }
+            },
+            "pos": 15,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 8
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.375,
+                    "y": -0.5,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 15,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": -0.5,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 16,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.875,
+                    "y": -0.5,
+                    "z": -4.75
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.5,
+                    "z": 0.25
+                }
+            },
+            "pos": 17,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 4,
+                "y1": 16,
+                "z1": 8
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.375,
+                    "y": -0.5,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 17,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.5,
+                    "y": -0.5,
+                    "z": -5.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 18,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": -0.5,
+                    "z": -5.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 19,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.5,
+                    "y": -0.5,
+                    "z": -5.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 20,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.625,
+                    "y": 0.8125,
+                    "z": 0.9375
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.0625,
+                    "z": 0.0625
+                }
+            },
+            "pos": 24,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 12,
+                "z0": 14,
+                "x1": 12,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.8125,
+                    "y": 0.5,
+                    "z": 0.9375
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.375,
+                    "z": 0.0625
+                }
+            },
+            "pos": 24,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 2,
+                "z0": 14,
+                "x1": 14,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.4375,
+                    "y": 0.4375,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.4375,
+                    "z": 0.5
+                }
+            },
+            "pos": 24,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 0,
+                "z0": 0,
+                "x1": 8,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.625,
+                    "y": 0.375,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.375,
+                    "z": 0.5
+                }
+            },
+            "pos": 24,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 12,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.1875,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 24,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 6,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 25,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.15625,
+                    "y": 0.96875,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.15625,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 26,
+            "normalizedBox": {
+                "x0": 11,
+                "y0": 15,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.1875,
+                    "y": 0.90625,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 26,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 14,
+                "z0": 0,
+                "x1": 16,
+                "y1": 15,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.21875,
+                    "y": 0.84375,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.21875,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 26,
+            "normalizedBox": {
+                "x0": 9,
+                "y0": 13,
+                "z0": 0,
+                "x1": 16,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.25,
+                    "y": 0.40625,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.40625,
+                    "z": 0.5
+                }
+            },
+            "pos": 26,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 13,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.75,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 26,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 8,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.0625,
+                    "y": 0.375,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.375,
+                    "z": 0.5
+                }
+            },
+            "pos": 27,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 2,
+                "y1": 12,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.1875,
+                    "y": 0.25,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.25,
+                    "z": 0.5
+                }
+            },
+            "pos": 27,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 0,
+                "z0": 0,
+                "x1": 4,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.4375,
+                    "y": 0.625,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.3125,
+                    "y": 0.125,
+                    "z": 0.25
+                }
+            },
+            "pos": 27,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 8,
+                "z0": 4,
+                "x1": 12,
+                "y1": 12,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.5,
+                    "y": 0.375,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.125,
+                    "z": 0.25
+                }
+            },
+            "pos": 27,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 4,
+                "z0": 4,
+                "x1": 12,
+                "y1": 8,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": -0.125
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.25,
+                    "z": 0.125
+                }
+            },
+            "pos": 27,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 4,
+                "z0": 12,
+                "x1": 12,
+                "y1": 12,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.9375,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 28,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 14,
+                "z0": 0,
+                "x1": 14,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.4375,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.4375,
+                    "z": 0.5
+                }
+            },
+            "pos": 28,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.03125,
+                    "y": 0.6875,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 29,
+            "normalizedBox": {
+                "x0": 15,
+                "y0": 10,
+                "z0": 0,
+                "x1": 16,
+                "y1": 12,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.0625,
+                    "y": 0.5625,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 29,
+            "normalizedBox": {
+                "x0": 14,
+                "y0": 8,
+                "z0": 0,
+                "x1": 16,
+                "y1": 10,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.09375,
+                    "y": 0.4375,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.09375,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 29,
+            "normalizedBox": {
+                "x0": 13,
+                "y0": 6,
+                "z0": 0,
+                "x1": 16,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 0.1875,
+                    "z": -0.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.1875,
+                    "z": 0.5
+                }
+            },
+            "pos": 29,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 6,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.6875,
+                    "y": 0.3125,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.3125,
+                    "z": 0.375
+                }
+            },
+            "pos": 30,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 10,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.0625,
+                    "y": 0.375,
+                    "z": -1.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.375,
+                    "z": 0.5
+                }
+            },
+            "pos": 30,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 2,
+                "y1": 12,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.3125,
+                    "y": 0.875,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.3125,
+                    "y": 0.125,
+                    "z": 0.375
+                }
+            },
+            "pos": 30,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 12,
+                "z0": 0,
+                "x1": 10,
+                "y1": 16,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.1875,
+                    "y": 0.25,
+                    "z": -1.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.25,
+                    "z": 0.5
+                }
+            },
+            "pos": 30,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 0,
+                "z0": 0,
+                "x1": 4,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.375,
+                    "y": 0.625,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.125,
+                    "z": 0.375
+                }
+            },
+            "pos": 30,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 8,
+                "z0": 0,
+                "x1": 10,
+                "y1": 12,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.4375,
+                    "y": 0.25,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.25,
+                    "z": 0.375
+                }
+            },
+            "pos": 30,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 10,
+                "y1": 8,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.9375,
+                    "z": -1.125
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 31,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 14,
+                "z0": 12,
+                "x1": 14,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.9375,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 31,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 14,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.4375,
+                    "z": -1.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.4375,
+                    "z": 0.5
+                }
+            },
+            "pos": 31,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 0.875,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.125,
+                    "z": 0.375
+                }
+            },
+            "pos": 32,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 12,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 0.375,
+                    "z": -1.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.375,
+                    "z": 0.5
+                }
+            },
+            "pos": 32,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 12,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.5,
+                    "y": 0.5,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.5,
+                    "z": 0.375
+                }
+            },
+            "pos": 32,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 16,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.4375,
+                    "y": 0.75,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.125,
+                    "z": 0.125
+                }
+            },
+            "pos": 33,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 10,
+                "z0": 12,
+                "x1": 8,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.5,
+                    "y": 0.9375,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 33,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 14,
+                "z0": 12,
+                "x1": 10,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.5625,
+                    "y": 0.4375,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.4375,
+                    "z": 0.125
+                }
+            },
+            "pos": 33,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 12,
+                "x1": 10,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.6875,
+                    "y": 0.3125,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.3125,
+                    "z": 0.125
+                }
+            },
+            "pos": 33,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 0,
+                "z0": 12,
+                "x1": 12,
+                "y1": 10,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.4375,
+                    "y": 0.3125,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.3125,
+                    "z": 0.5
+                }
+            },
+            "pos": 33,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 0,
+                "z0": 0,
+                "x1": 8,
+                "y1": 10,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.1875,
+                    "y": 0.5,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 33,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 6,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.5,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 34,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.5,
+                    "y": 0.8125,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.1875,
+                    "z": 0.125
+                }
+            },
+            "pos": 35,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 10,
+                "z0": 12,
+                "x1": 10,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.625,
+                    "y": 0.3125,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.3125,
+                    "z": 0.125
+                }
+            },
+            "pos": 35,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 12,
+                "x1": 8,
+                "y1": 10,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.3125,
+                    "y": 0.75,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.125,
+                    "z": 0.5
+                }
+            },
+            "pos": 35,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 10,
+                "z0": 0,
+                "x1": 12,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.1875,
+                    "y": 0.9375,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 35,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 14,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.375,
+                    "y": 0.3125,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.3125,
+                    "z": 0.5
+                }
+            },
+            "pos": 35,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 10,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 0.4375,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.4375,
+                    "z": 0.5
+                }
+            },
+            "pos": 35,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.375,
+                    "y": 0.875,
+                    "z": -3.125
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.125,
+                    "z": 0.125
+                }
+            },
+            "pos": 36,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 12,
+                "z0": 12,
+                "x1": 8,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.125,
+                    "y": 0.125,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.125,
+                    "z": 0.25
+                }
+            },
+            "pos": 36,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 4,
+                "x1": 4,
+                "y1": 4,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.125,
+                    "y": 0.5,
+                    "z": -3.125
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.5,
+                    "z": 0.125
+                }
+            },
+            "pos": 36,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 12,
+                "x1": 4,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.125,
+                    "y": 0.5,
+                    "z": -3.625
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.25,
+                    "z": 0.375
+                }
+            },
+            "pos": 36,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 4,
+                "z0": 0,
+                "x1": 4,
+                "y1": 12,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.25,
+                    "y": 0.875,
+                    "z": -3.625
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.125,
+                    "z": 0.375
+                }
+            },
+            "pos": 36,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 12,
+                "z0": 0,
+                "x1": 8,
+                "y1": 16,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.375,
+                    "y": 0.375,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.375,
+                    "z": 0.5
+                }
+            },
+            "pos": 36,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 8,
+                "y1": 12,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.5,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 37,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.3125,
+                    "y": 0.75,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.125,
+                    "z": 0.5
+                }
+            },
+            "pos": 38,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 10,
+                "z0": 0,
+                "x1": 12,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.1875,
+                    "y": 0.9375,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 38,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 14,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.375,
+                    "y": 0.3125,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.3125,
+                    "z": 0.5
+                }
+            },
+            "pos": 38,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 10,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 0.4375,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.4375,
+                    "z": 0.5
+                }
+            },
+            "pos": 38,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.625,
+                    "y": 0.5,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.5,
+                    "z": 0.125
+                }
+            },
+            "pos": 39,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 16,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.25,
+                    "y": 0.5,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 39,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 8,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.5,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 40,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.5,
+                    "y": 0.8125,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.1875,
+                    "z": 0.125
+                }
+            },
+            "pos": 41,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 10,
+                "z0": 0,
+                "x1": 10,
+                "y1": 16,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.625,
+                    "y": 0.3125,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.3125,
+                    "z": 0.125
+                }
+            },
+            "pos": 41,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 8,
+                "y1": 10,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.3125,
+                    "y": 0.75,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.125,
+                    "z": 0.5
+                }
+            },
+            "pos": 41,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 10,
+                "z0": 0,
+                "x1": 12,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.1875,
+                    "y": 0.9375,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 41,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 14,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.375,
+                    "y": 0.3125,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.3125,
+                    "z": 0.5
+                }
+            },
+            "pos": 41,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 0,
+                "x1": 12,
+                "y1": 10,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 0.4375,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.4375,
+                    "z": 0.5
+                }
+            },
+            "pos": 41,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.71875,
+                    "y": 0.21875,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.21875,
+                    "z": 0.375
+                }
+            },
+            "pos": 42,
+            "normalizedBox": {
+                "x0": 11,
+                "y0": 0,
+                "z0": 4,
+                "x1": 12,
+                "y1": 7,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.59375,
+                    "y": 0.40625,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.40625,
+                    "z": 0.375
+                }
+            },
+            "pos": 42,
+            "normalizedBox": {
+                "x0": 9,
+                "y0": 0,
+                "z0": 4,
+                "x1": 10,
+                "y1": 13,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.65625,
+                    "y": 0.3125,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.3125,
+                    "z": 0.375
+                }
+            },
+            "pos": 42,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 0,
+                "z0": 4,
+                "x1": 11,
+                "y1": 10,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.28125,
+                    "y": 0.5,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.28125,
+                    "y": 0.5,
+                    "z": 0.375
+                }
+            },
+            "pos": 42,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 4,
+                "x1": 9,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.5,
+                    "z": -5.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 43,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.625,
+                    "y": 0.5625,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 44,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 8,
+                "z0": 4,
+                "x1": 8,
+                "y1": 10,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.5625,
+                    "y": 0.75,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.125,
+                    "z": 0.375
+                }
+            },
+            "pos": 44,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 10,
+                "z0": 4,
+                "x1": 8,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.3125,
+                    "y": 0.9375,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.3125,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 44,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 14,
+                "z0": 4,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.25,
+                    "y": 0.6875,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.1875,
+                    "z": 0.375
+                }
+            },
+            "pos": 44,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 8,
+                "z0": 4,
+                "x1": 16,
+                "y1": 14,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.375,
+                    "y": 0.25,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.375,
+                    "y": 0.25,
+                    "z": 0.375
+                }
+            },
+            "pos": 44,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 4,
+                "x1": 16,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 0.5,
+                    "z": -6.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "pos": 46,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 16,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.15625,
+                    "y": 1.03125,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 48,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 0,
+                "z0": 0,
+                "x1": 3,
+                "y1": 1,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.03125,
+                    "y": 1.09375,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.09375,
+                    "z": 0.5
+                }
+            },
+            "pos": 48,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 1,
+                "y1": 3,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.09375,
+                    "y": 1.0625,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 48,
+            "normalizedBox": {
+                "x0": 1,
+                "y0": 0,
+                "z0": 0,
+                "x1": 2,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.125,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.125,
+                    "z": 0.5
+                }
+            },
+            "pos": 49,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 4,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.03125,
+                    "y": 1.15625,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 50,
+            "normalizedBox": {
+                "x0": 15,
+                "y0": 2,
+                "z0": 0,
+                "x1": 16,
+                "y1": 3,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.0625,
+                    "y": 1.09375,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 50,
+            "normalizedBox": {
+                "x0": 14,
+                "y0": 1,
+                "z0": 0,
+                "x1": 16,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.09375,
+                    "y": 1.03125,
+                    "z": 0.5
+                },
+                "m_Extent": {
+                    "x": 0.09375,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 50,
+            "normalizedBox": {
+                "x0": 13,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 1,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.4375,
+                    "y": 1.0625,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 54,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 0,
+                "z0": 0,
+                "x1": 8,
+                "y1": 2,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.1875,
+                    "y": 1.1875,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.1875,
+                    "z": 0.375
+                }
+            },
+            "pos": 54,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 0,
+                "z0": 0,
+                "x1": 4,
+                "y1": 6,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.3125,
+                    "y": 1.125,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.125,
+                    "z": 0.375
+                }
+            },
+            "pos": 54,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 6,
+                "y1": 4,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.0625,
+                    "y": 1.25,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.25,
+                    "z": 0.375
+                }
+            },
+            "pos": 54,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 2,
+                "y1": 8,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.25,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.25,
+                    "z": 0.375
+                }
+            },
+            "pos": 55,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 8,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.0625,
+                    "y": 1.4375,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 56,
+            "normalizedBox": {
+                "x0": 14,
+                "y0": 6,
+                "z0": 0,
+                "x1": 16,
+                "y1": 8,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 1.3125,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 56,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 4,
+                "z0": 0,
+                "x1": 16,
+                "y1": 6,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.1875,
+                    "y": 1.1875,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 56,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 2,
+                "z0": 0,
+                "x1": 16,
+                "y1": 4,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.25,
+                    "y": 1.0625,
+                    "z": -1.625
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 56,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 2,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.4375,
+                    "y": 1.0625,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 57,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 0,
+                "z0": 12,
+                "x1": 8,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.0625,
+                    "y": 1.3125,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.1875,
+                    "z": 0.125
+                }
+            },
+            "pos": 57,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 2,
+                "z0": 12,
+                "x1": 2,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.1875,
+                    "y": 1.1875,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.1875,
+                    "z": 0.125
+                }
+            },
+            "pos": 57,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 0,
+                "z0": 12,
+                "x1": 4,
+                "y1": 6,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.3125,
+                    "y": 1.125,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.125,
+                    "z": 0.125
+                }
+            },
+            "pos": 57,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 12,
+                "x1": 6,
+                "y1": 4,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.0625,
+                    "y": 1.0625,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 57,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 2,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.375,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.125,
+                    "z": 0.125
+                }
+            },
+            "pos": 58,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 4,
+                "z0": 12,
+                "x1": 16,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.125,
+                    "z": -2.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.125,
+                    "z": 0.5
+                }
+            },
+            "pos": 58,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 4,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.0625,
+                    "y": 1.4375,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 59,
+            "normalizedBox": {
+                "x0": 14,
+                "y0": 6,
+                "z0": 12,
+                "x1": 16,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 1.3125,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 59,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 4,
+                "z0": 12,
+                "x1": 16,
+                "y1": 6,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.0625,
+                    "y": 1.0625,
+                    "z": -2.625
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 59,
+            "normalizedBox": {
+                "x0": 14,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 2,
+                "z1": 12
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.1875,
+                    "y": 1.1875,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 59,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 2,
+                "z0": 12,
+                "x1": 16,
+                "y1": 4,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.25,
+                    "y": 1.0625,
+                    "z": -2.125
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 59,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 12,
+                "x1": 16,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.09375,
+                    "y": 1.03125,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 60,
+            "normalizedBox": {
+                "x0": 1,
+                "y0": 0,
+                "z0": 0,
+                "x1": 2,
+                "y1": 1,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.03125,
+                    "y": 1.0625,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 60,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 1,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.21875,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.4375,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 61,
+            "normalizedBox": {
+                "x0": 1,
+                "y0": 3,
+                "z0": 0,
+                "x1": 15,
+                "y1": 4,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.09375,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.09375,
+                    "z": 0.5
+                }
+            },
+            "pos": 61,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 3,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.03125,
+                    "y": 1.09375,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 62,
+            "normalizedBox": {
+                "x0": 15,
+                "y0": 1,
+                "z0": 0,
+                "x1": 16,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.0625,
+                    "y": 1.03125,
+                    "z": -3.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 62,
+            "normalizedBox": {
+                "x0": 14,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 1,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.4375,
+                    "y": 1.0625,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 63,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 0,
+                "z0": 0,
+                "x1": 8,
+                "y1": 2,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.0625,
+                    "y": 1.3125,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.1875,
+                    "z": 0.125
+                }
+            },
+            "pos": 63,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 2,
+                "z0": 0,
+                "x1": 2,
+                "y1": 8,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.1875,
+                    "y": 1.1875,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.1875,
+                    "z": 0.125
+                }
+            },
+            "pos": 63,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 0,
+                "z0": 0,
+                "x1": 4,
+                "y1": 6,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.3125,
+                    "y": 1.125,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.125,
+                    "z": 0.125
+                }
+            },
+            "pos": 63,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 0,
+                "x1": 6,
+                "y1": 4,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.0625,
+                    "y": 1.0625,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.5
+                }
+            },
+            "pos": 63,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 2,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.96875,
+                    "y": 1.3125,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.125,
+                    "z": 0.125
+                }
+            },
+            "pos": 64,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 3,
+                "z0": 0,
+                "x1": 1,
+                "y1": 7,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.03125,
+                    "y": 1.3125,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.03125,
+                    "y": 0.125,
+                    "z": 0.125
+                }
+            },
+            "pos": 64,
+            "normalizedBox": {
+                "x0": 15,
+                "y0": 3,
+                "z0": 0,
+                "x1": 16,
+                "y1": 7,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.46875,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.03125,
+                    "z": 0.125
+                }
+            },
+            "pos": 64,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 7,
+                "z0": 0,
+                "x1": 16,
+                "y1": 8,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.34375,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.4375,
+                    "y": 0.09375,
+                    "z": 0.125
+                }
+            },
+            "pos": 64,
+            "normalizedBox": {
+                "x0": 1,
+                "y0": 4,
+                "z0": 0,
+                "x1": 15,
+                "y1": 7,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.21875,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.4375,
+                    "y": 0.03125,
+                    "z": 0.5
+                }
+            },
+            "pos": 64,
+            "normalizedBox": {
+                "x0": 1,
+                "y0": 3,
+                "z0": 0,
+                "x1": 15,
+                "y1": 4,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.09375,
+                    "z": -4.5
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.09375,
+                    "z": 0.5
+                }
+            },
+            "pos": 64,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 3,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.0625,
+                    "y": 1.4375,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 65,
+            "normalizedBox": {
+                "x0": 14,
+                "y0": 6,
+                "z0": 0,
+                "x1": 16,
+                "y1": 8,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 1.3125,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 65,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 4,
+                "z0": 0,
+                "x1": 16,
+                "y1": 6,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.0625,
+                    "y": 1.0625,
+                    "z": -4.375
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 65,
+            "normalizedBox": {
+                "x0": 14,
+                "y0": 0,
+                "z0": 4,
+                "x1": 16,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.1875,
+                    "y": 1.1875,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 65,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 2,
+                "z0": 0,
+                "x1": 16,
+                "y1": 4,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.25,
+                    "y": 1.0625,
+                    "z": -4.875
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.0625,
+                    "z": 0.125
+                }
+            },
+            "pos": 65,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 0,
+                "x1": 16,
+                "y1": 2,
+                "z1": 4
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.4375,
+                    "y": 1.0625,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 66,
+            "normalizedBox": {
+                "x0": 6,
+                "y0": 0,
+                "z0": 4,
+                "x1": 8,
+                "y1": 2,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.1875,
+                    "y": 1.1875,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.1875,
+                    "z": 0.375
+                }
+            },
+            "pos": 66,
+            "normalizedBox": {
+                "x0": 2,
+                "y0": 0,
+                "z0": 4,
+                "x1": 4,
+                "y1": 6,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.3125,
+                    "y": 1.125,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.125,
+                    "z": 0.375
+                }
+            },
+            "pos": 66,
+            "normalizedBox": {
+                "x0": 4,
+                "y0": 0,
+                "z0": 4,
+                "x1": 6,
+                "y1": 4,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": 0.0625,
+                    "y": 1.25,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.25,
+                    "z": 0.375
+                }
+            },
+            "pos": 66,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 4,
+                "x1": 2,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -0.5,
+                    "y": 1.25,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.5,
+                    "y": 0.25,
+                    "z": 0.375
+                }
+            },
+            "pos": 67,
+            "normalizedBox": {
+                "x0": 0,
+                "y0": 0,
+                "z0": 4,
+                "x1": 16,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.0625,
+                    "y": 1.4375,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.0625,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 68,
+            "normalizedBox": {
+                "x0": 14,
+                "y0": 6,
+                "z0": 4,
+                "x1": 16,
+                "y1": 8,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.125,
+                    "y": 1.3125,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.125,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 68,
+            "normalizedBox": {
+                "x0": 12,
+                "y0": 4,
+                "z0": 4,
+                "x1": 16,
+                "y1": 6,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.1875,
+                    "y": 1.1875,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.1875,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 68,
+            "normalizedBox": {
+                "x0": 10,
+                "y0": 2,
+                "z0": 4,
+                "x1": 16,
+                "y1": 4,
+                "z1": 16
+            }
+        },
+        {
+            "bounds": {
+                "m_Center": {
+                    "x": -1.25,
+                    "y": 1.0625,
+                    "z": -5.375
+                },
+                "m_Extent": {
+                    "x": 0.25,
+                    "y": 0.0625,
+                    "z": 0.375
+                }
+            },
+            "pos": 68,
+            "normalizedBox": {
+                "x0": 8,
+                "y0": 0,
+                "z0": 4,
+                "x1": 16,
+                "y1": 2,
+                "z1": 16
+            }
+        }
+    ],
+    "ignoredPositions": [],
+    "totalCollisions": 165
+}
